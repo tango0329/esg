@@ -1,0 +1,34 @@
+#port
+server:
+  port: 8080
+
+
+spring:
+  # database
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@g70c01c52aad7a5_esg2024_high?TNS_ADMIN=/Users/ciel/Downloads/Wallet_ESG2024
+    username: ADMIN
+    password: 369Kimchae^^
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+    open-in-view: true
+  thymeleaf:
+    suffix: .html
+    prefix: classpath:/templates/
+logging:
+  level:
+    root: info
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
+
